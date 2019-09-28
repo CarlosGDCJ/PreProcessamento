@@ -37,9 +37,9 @@ BEGIN
             FROM %s WHERE ''%s'' LIKE t_rec
             ', tabela, temp);
 
-        SELECT to_char(MIN(r_value::numeric),'FM999D99') FROM Intervalo INTO rvmin;
-        SELECT to_char(MAX(r_value::numeric),'FM999D99') FROM Intervalo INTO rvmax;
-        SELECT to_char(AVG(r_value::numeric),'FM999D99') FROM Intervalo INTO rvavg;
+        SELECT to_char(MIN(NULLIF(r_value::numeric, 0)),'FM999D99') FROM Intervalo INTO rvmin;
+        SELECT to_char(MAX(NULLIF(r_value::numeric, 0)),'FM999D99') FROM Intervalo INTO rvmax;
+        SELECT to_char(AVG(NULLIF(r_value::numeric, 0)),'FM999D99') FROM Intervalo INTO rvavg;
 
         SELECT to_char(MIN(usflux::numeric), '9.9999EEEE') FROM Intervalo INTO ufmin;
         SELECT to_char(MAX(usflux::numeric), '9.9999EEEE') FROM Intervalo INTO ufmax;
