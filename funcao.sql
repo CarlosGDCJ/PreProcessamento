@@ -10,9 +10,6 @@ CREATE TABLE UnifTeste (
     usfluxavg text COLLATE pg_catalog."default"
 );
 
-DROP VIEW IF EXISTS Intervalo;
-
-
 DROP FUNCTION preProcessa;
 CREATE FUNCTION preProcessa ( tabela regclass ) RETURNS VOID AS $$
 DECLARE 
@@ -29,7 +26,6 @@ BEGIN
     LOOP
         FETCH curs INTO temp;
         EXIT WHEN NOT FOUND;
-        --RAISE NOTICE 'Temp Atual: %', temp;           Descomente para verificar o funcionamento do cursor
 
         EXECUTE format('
             CREATE OR REPLACE VIEW Intervalo AS 
@@ -37,9 +33,9 @@ BEGIN
             FROM %s WHERE ''%s'' LIKE t_rec
             ', tabela, temp);
 
-        SELECT to_char(MIN(NULLIF(r_value::numeric, 0)),'FM999D99') FROM Intervalo INTO rvmin;
-        SELECT to_char(MAX(NULLIF(r_value::numeric, 0)),'FM999D99') FROM Intervalo INTO rvmax;
-        SELECT to_char(AVG(NULLIF(r_value::numeric, 0)),'FM999D99') FROM Intervalo INTO rvavg;
+        SELECT to_char(MIN(NULLIF(r_value::numeric, 0)),'FM999D00') FROM Intervalo INTO rvmin;
+        SELECT to_char(MAX(NULLIF(r_value::numeric, 0)),'FM999D00') FROM Intervalo INTO rvmax;
+        SELECT to_char(AVG(NULLIF(r_value::numeric, 0)),'FM999D00') FROM Intervalo INTO rvavg;
 
         SELECT to_char(MIN(usflux::numeric), '9.9999EEEE') FROM Intervalo INTO ufmin;
         SELECT to_char(MAX(usflux::numeric), '9.9999EEEE') FROM Intervalo INTO ufmax;
