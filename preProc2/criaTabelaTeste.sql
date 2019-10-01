@@ -16,7 +16,7 @@ DECLARE
     curs refcursor;
 	
 BEGIN
-    OPEN curs FOR EXECUTE format('SELECT DISTINCT t_rec FROM %s ORDER BY t_rec', tabela);
+    OPEN curs FOR EXECUTE format('SELECT t_rec FROM %s ORDER BY t_rec', tabela);
     LOOP
         FETCH curs INTO temp;
         EXIT WHEN NOT FOUND;
