@@ -29,10 +29,10 @@ Contém as functions responsáveis por converter a tabela *solarflare_sharp_720s
     Cria a tabela **Teste** e preenche ela com os valores de tempo com granularidade de **minutos** insere também o valor de **raio x** medido nesse instante, e a **noaa_ar, usflux e r_value**. O nome da tabela passada como parâmetro deve ser colocado entre aspas simples.
 
 #### **criaColunasRegioesAtivas.sql**
-Contém as functions responsáveis por adicionar colunas de rvalue e usflux à tabela *Teste* para cada uma das regiões ativas noaa_ar.
+Contém as functions responsáveis por adicionar colunas de rvalue e usflux à tabela *Teste* para cada uma das regiões ativas noaa_ar e retirar as colunas de noaa_ar, rvalue(geral) e usflux(geral).
     
 * criaColunasRegioesAtivas('*nome da tabela*')    
     
     Entrada: Tabela que contém pelo menos os seguintes atributos: *t_rec, rx, noaa_ar, r_value, usflux*. Todos no formato TEXT.
     
-    Atualiza a tabela passado como parâmetro, adicionando colunas de usflux e rvalue para cada uma das diferentes regiões ativas (noaa_ar) contidas na tabela. O nome da tabela passada como parâmetro deve ser colocado entre aspas simples.
+    Atualiza a tabela passado como parâmetro, adicionando colunas de usflux e rvalue para cada uma das diferentes regiões ativas (noaa_ar) contidas na tabela. Além disso, retira as colunas de noaa_ar, rvalue(geral) e usflux(geral). O nome da tabela passada como parâmetro deve ser colocado entre aspas simples.

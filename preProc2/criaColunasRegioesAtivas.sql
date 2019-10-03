@@ -61,5 +61,13 @@ BEGIN
 
     END LOOP;
 
+    -- Dropar as colunas noaa_ar, rvalue e usflux
+    EXECUTE format('ALTER TABLE %s 
+                        DROP  COLUMN noaa_ar CASCADE,
+                        DROP COLUMN rvalue,
+                        DROP COLUMN usflux;'
+                    , tabela
+                  );
+
 END;
 $Q$ LANGUAGE plpgsql;
