@@ -9,7 +9,7 @@ solares
 
 ## Scripts
 ### preProc1
-#### **função.sql** (nome temporário)
+#### **funcao.sql** (nome temporário)
 Contém as functions responsáveis por converter a tabela *solarflare_sharp_720s_BDunificado* no formato desejado. 
     
 * preprocessa('*nome da tabela*')
@@ -36,3 +36,10 @@ Contém as functions responsáveis por adicionar colunas de rvalue e usflux à t
     Entrada: Tabela que contém pelo menos os seguintes atributos: *t_rec, rx, noaa_ar, r_value, usflux*. Todos no formato TEXT.
     
     Atualiza a tabela passado como parâmetro, adicionando colunas de usflux e rvalue para cada uma das diferentes regiões ativas (noaa_ar) contidas na tabela. Além disso, retira as colunas de noaa_ar, rvalue(geral) e usflux(geral). O nome da tabela passada como parâmetro deve ser colocado entre aspas simples.
+
+### Otimizacao
+Essa pasta contém os scripts que, se tudo der certo, rodarão na base toda em tempo aceitável
+#### funcmin.sql
+Mesma abordagem do funcao.sql, mas utiliza índice e menos SQL dinâmico. A *function* preprocessa() agora não recebe argumento nenhum. Quando executada vai pegar a tabela de nome **unifmin** e deixar no formato desejado.
+#### funcminDel.sql
+Mesma abordagem do funcmin.sql, mas deleta as entradas da tabela original depois de serem utilizadas. **Altera a tabela que é passada**
