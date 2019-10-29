@@ -1,0 +1,4 @@
+Minimizar a tabela(remover attr irrelevantes antes de mandar processar)
+Converter os tipos de dados, e trabalhar com a tabela convertida
+Olhar a estatística do banco de dados -> Plano de execução de consultas -> Verificar a utilização do índice 
+Usar a nuvem
