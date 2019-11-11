@@ -1,0 +1,9 @@
+\copy continua TO '/home/carlos/Downloads/TabelaContinuaCompleta.csv' DELIMITER ',' CSV HEADER;
+\copy continua2010 TO '/home/carlos/Downloads/continua2010.csv' DELIMITER ',' CSV HEADER;
+\copy continua2011 TO '/home/carlos/Downloads/continua2011.csv' DELIMITER ',' CSV HEADER;
+\copy continua2012 TO '/home/carlos/Downloads/continua2012.csv' DELIMITER ',' CSV HEADER;
+\copy continua2013 TO '/home/carlos/Downloads/continua2013.csv' DELIMITER ',' CSV HEADER;
+\copy continua2014 TO '/home/carlos/Downloads/continua2014.csv' DELIMITER ',' CSV HEADER;
+\copy continua2015 TO '/home/carlos/Downloads/continua2015.csv' DELIMITER ',' CSV HEADER;
+\copy continua2016 TO '/home/carlos/Downloads/continua2016.csv' DELIMITER ',' CSV HEADER;
+\copy continua2017 TO '/home/carlos/Downloads/continua2017.csv' DELIMITER ',' CSV HEADER;

@@ -1,0 +1,9 @@
+ALTER TABLE continua ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
+ALTER TABLE continua2010 ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
+ALTER TABLE continua2011 ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
+ALTER TABLE continua2012 ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
+ALTER TABLE continua2013 ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
+ALTER TABLE continua2014 ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
+ALTER TABLE continua2015 ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
+ALTER TABLE continua2016 ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
+ALTER TABLE continua2017 ALTER COLUMN t_rec TYPE text USING concat(substring(replace(replace(t_rec::text, '-', '.'), ' ', '_') FROM 1 FOR 19), '_TAI');
