@@ -21,14 +21,15 @@ BEGIN
         -- RAISE NOTICE '%', t1;
         FETCH curs INTO t2;
         EXIT WHEN NOT FOUND;
-        -- RAISE NOTICE '%', t2;
+        -- RAISE NOTICE '%', t2;    
 
         WHILE (t1 + INTERVAL '1 minute' <> t2) LOOP
             SELECT t1 + INTERVAL '1 minute' INTO t1;
             EXECUTE format('
             INSERT INTO %s (t_rec, rx, rvaluemin, rvaluemax, rvalueavg, usfluxmin, usfluxmax, usfluxavg, classemin, classemax)
-            VALUES ($1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-            ', tabela) USING t1;
+            VALUES (''%s'', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+            ', tabela, t1);
+            RAISE NOTICE 'T1: % T2: %', t1, t2;
         END LOOP;
         MOVE BACKWARD FROM curs;
         -- RAISE NOTICE 'Acabou uma iteracao';
