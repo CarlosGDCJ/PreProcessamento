@@ -1,0 +1,2 @@
+gcc MatrizCubica_com_OpenCSV.c -o janela_multiple -lm
+./janela_multiple
