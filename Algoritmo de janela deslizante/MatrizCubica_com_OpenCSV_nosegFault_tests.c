@@ -201,9 +201,9 @@ int main(){
     int presentWindow = 720, jump = 0, futureWindow = 1440;
     int windowSize = presentWindow + jump  + futureWindow;
 
-strcpy(vetPathFile,"/home/carlos/Downloads/sergio2014.csv");
+strcpy(vetPathFile,"/home/carlos/Downloads/EntradasJanelaDesl/sergio2017.csv");
 
-strcpy(vetPathFileSlided,"/home/carlos/Downloads/sergio2014slided.csv");
+strcpy(vetPathFileSlided,"/home/carlos/Downloads/SaidasJanelaDesl/sergio2017slided.csv");
 
     totalLinhas = retFileNumLines();//atoi(str)/CHARLINHA*1.2;
 	

@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     sergio2012slided-weka.filters.unsupervised.attribute.Remove-V-R1,721,720,719,716,717,718,715,714,713,712,711,710,708,709,703,705,704,707,706,702,699,701,700,696,697,691,692,693,695,678,722
+Instances:    524881
+Attributes:   32
+              t_rec
+              at719
+              at718
+              at717
+              at714
+              at715
+              at716
+              at713
+              at712
+              at711
+              at710
+              at709
+              at708
+              at706
+              at707
+              at701
+              at703
+              at702
+              at705
+              at704
+              at700
+              at697
+              at699
+              at698
+              at694
+              at695
+              at689
+              at690
+              at691
+              at693
+              at676
+              class
+Test mode:    20-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.09 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances      416780               79.4047 %
+Incorrectly Classified Instances    108101               20.5953 %
+Kappa statistic                          0.7063
+Mean absolute error                      0.0858
+Root mean squared error                  0.267 
+Relative absolute error                 30.4915 %
+Root relative squared error             71.2072 %
+Total Number of Instances           524881     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,864    0,149    0,702      0,864    0,775      0,677    0,887     0,754     A
+                 0,744    0,028    0,819      0,744    0,780      0,746    0,894     0,699     B
+                 0,810    0,086    0,870      0,810    0,839      0,733    0,880     0,812     C
+                 0,660    0,027    0,800      0,660    0,723      0,687    0,876     0,654     M
+                 0,714    0,003    0,723      0,714    0,719      0,716    0,845     0,524     X
+Weighted Avg.    0,794    0,087    0,803      0,794    0,794      0,712    0,883     0,753     
+
+=== Confusion Matrix ===
+
+      a      b      c      d      e   <-- classified as
+ 131032   5659  11764   2949    276 |      a = A
+  13221  56008   5128    880     44 |      b = B
+  27173   5700 176829   7761    764 |      c = C
+  14742    999   8740  48585    571 |      d = M
+    356     24    804    546   4326 |      e = X
+
