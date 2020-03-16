@@ -1,0 +1,108 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sergio2017slided-weka.filters.unsupervised.attribute.Remove-V-R1,721,720,719,718,717,715,716,714,713,711,712,709,710,708,705,707,706,704,703,702,699,700,701,698,697,696,693,695,694,691,722
+Instances:    514813
+Attributes:   32
+              t_rec
+              at719
+              at718
+              at717
+              at716
+              at715
+              at713
+              at714
+              at712
+              at711
+              at709
+              at710
+              at707
+              at708
+              at706
+              at703
+              at705
+              at704
+              at702
+              at701
+              at700
+              at697
+              at698
+              at699
+              at696
+              at695
+              at694
+              at691
+              at693
+              at692
+              at689
+              class
+Test mode:    20-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+at719 <= 0.000305
+|   at705 <= 0.000305
+|   |   at691 <= 0.000305: A (514698.0/205086.0)
+|   |   at691 > 0.000305
+|   |   |   at706 <= 0.000185: M (9.0)
+|   |   |   at706 > 0.000185
+|   |   |   |   at698 <= 0.000392: A (14.0)
+|   |   |   |   at698 > 0.000392: M (5.0)
+|   at705 > 0.000305
+|   |   at689 <= 0.000451: M (14.0)
+|   |   at689 > 0.000451: A (14.0)
+at719 > 0.000305
+|   at709 <= 0.000828
+|   |   at703 <= 0.000025
+|   |   |   at711 <= 0.00052
+|   |   |   |   at709 <= 0.000038
+|   |   |   |   |   at712 <= 0.000014: X (5.0)
+|   |   |   |   |   at712 > 0.000014
+|   |   |   |   |   |   at718 <= 0.00073: A (5.0)
+|   |   |   |   |   |   at718 > 0.00073: X (4.0)
+|   |   |   |   at709 > 0.000038: A (5.0)
+|   |   |   at711 > 0.00052: X (5.0)
+|   |   at703 > 0.000025: A (32.0)
+|   at709 > 0.000828: M (3.0)
+
+Number of Leaves  : 	13
+
+Size of the tree : 	25
+
+
+Time taken to build model: 28.59 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances      309711               60.1599 %
+Incorrectly Classified Instances    205102               39.8401 %
+Kappa statistic                          0.0003
+Mean absolute error                      0.2248
+Root mean squared error                  0.3353
+Relative absolute error                 99.9767 %
+Root relative squared error             99.9914 %
+Total Number of Instances           514813     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,602      1,000    0,751      0,008    0,500     0,602     A
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,251     B
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,109     C
+                 0,002    0,000    0,966      0,002    0,003      0,040    0,501     0,034     M
+                 0,003    0,000    0,563      0,003    0,006      0,040    0,501     0,008     X
+Weighted Avg.    0,602    0,601    ?          0,602    ?          ?        0,500     0,438     
+
+=== Confusion Matrix ===
+
+      a      b      c      d      e   <-- classified as
+ 309674      0      0      1      7 |      a = A
+ 129372      0      0      0      0 |      b = B
+  56013      0      0      0      0 |      c = C
+  16588      0      0     28      0 |      d = M
+   3121      0      0      0      9 |      e = X
+

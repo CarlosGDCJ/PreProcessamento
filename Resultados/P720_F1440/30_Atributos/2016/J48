@@ -1,0 +1,82 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sergio2016slided-weka.filters.unsupervised.attribute.Remove-V-R1,721,710,679,715,714,695,718,680,712,719,681,689,687,678,700,686,683,672,699,713,698,706,711,708,692,720,701,690,709,717,722
+Instances:    524881
+Attributes:   32
+              t_rec
+              at719
+              at708
+              at677
+              at713
+              at712
+              at693
+              at716
+              at678
+              at710
+              at717
+              at679
+              at687
+              at685
+              at676
+              at698
+              at684
+              at681
+              at670
+              at697
+              at711
+              at696
+              at704
+              at709
+              at706
+              at690
+              at718
+              at699
+              at688
+              at707
+              at715
+              class
+Test mode:    20-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+: A (524881.0/164843.0)
+
+Number of Leaves  : 	1
+
+Size of the tree : 	1
+
+
+Time taken to build model: 4.32 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances      360038               68.5942 %
+Incorrectly Classified Instances    164843               31.4058 %
+Kappa statistic                          0     
+Mean absolute error                      0.242 
+Root mean squared error                  0.3478
+Relative absolute error                 99.9996 %
+Root relative squared error            100      %
+Total Number of Instances           524881     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,014     M
+                 1,000    1,000    0,686      1,000    0,814      ?        0,500     0,686     A
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,164     B
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,136     C
+Weighted Avg.    0,686    0,686    ?          0,686    ?          ?        0,500     0,516     
+
+=== Confusion Matrix ===
+
+      a      b      c      d   <-- classified as
+      0   7592      0      0 |      a = M
+      0 360038      0      0 |      b = A
+      0  86114      0      0 |      c = B
+      0  71137      0      0 |      d = C
+
